@@ -44,9 +44,82 @@
                 <h2 class="flySearcher-title">Cuentanos sobre tu vuelo</h2>
                 <div class="flySearcher">
                     <select class="flyOption" name="Tipos de vuelos">
-                        <option>Solo ida</option>
                         <option>Ida y vuelta</option>
+                        <option>Solo ida</option>
                     </select>
+                    <div class="trayectSearcher"><!--Flex-->
+                        <div class="origin-container trayect-child-container">
+                            <input class="origin-input trayect-input input">
+                            <label class="label origin-title trayect-label">Origen</label>
+                        </div>
+                        <div class="swapButton">
+                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        </div>
+                        <div class="destiny-container trayect-child-container">
+                            <input class="destiny-input trayect-input input">
+                            <label class="label origin-title trayect-label">Destino</label>
+                        </div>
+                    </div>
+                    <div class="dateSearcher">
+                        <div class="goDate-container goDate-child-container">
+                            <label class="label goDate-title date-label">Ida</label>
+                            <form action="/enviar-fecha" method="get">
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                    value="2026-11-21"
+                                    min="2026-01-01"
+                                    max="2026-12-31"
+                                    required
+                                />
+                            </form>
+                        </div>
+                        <div class="goDate-container goDate-child-container">
+                            <label class="label goDate-title date-label">Vuelta</label>
+                            <form action="/enviar-fecha" method="get">
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                    value="2026-11-21"
+                                    min="2026-01-01"
+                                    max="2026-12-31"
+                                    required
+                                />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="people-chooser">
+                        <i class="fa-regular fa-user"></i>
+                        <p class="people-number">1</p>
+                        <div class="peopleChooser-panel">
+                            <div class="person-option-container oldPerson-option-container">
+                                <div class="person-option-text">
+                                    <p class="person-option-title">Mayores</p>
+                                    <p class="person-option-detail">Desde 18 años</p>
+                                </div>
+                                <div class="person-option-increment">
+                                    <i class="fa-solid fa-plus oldPerson-increment-button"></i>
+                                    <input class="oldPerson-number" type="number" value = 0>
+                                    <i class="fa-solid fa-minus oldPerson-minus-button"></i>
+                                </div>
+                            </div>
+                            <div class="person-option-container youngPerson-option-container">
+                                <div class="person-option-text">
+                                    <p class="person-option-title">Menores</p>
+                                    <p class="person-option-detail">Hasta 17 años</p>
+                                </div>
+                                <div class="person-option-increment">
+                                    <i class="fa-solid fa-plus youngPerson-increment-button"></i>
+                                    <input class="youngPerson-number" type="number" value = 0>
+                                    <i class="fa-solid fa-minus youngPerson-minus-button"></i>
+                                </div>
+                            </div>
+                            <button class="apply-button peopleChooser-button">Aplicar</button>
+                        </div>
+                    </div>
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i>Buscar</button>
                 </div>
             </div>
         </main>
